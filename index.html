@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Filipa Maia, UX/UI Designer. Explore my projects, my background and get in touch."
+    />
+    <title>Filipa Maia - UX/UI Designer</title>
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:title"       content="Filipa Maia - UX/UI Designer" />
+    <meta property="og:description" content="Portfolio of Filipa Maia, UX/UI Designer. Explore my projects, my background and get in touch." />
+    <meta property="og:image"       content="images/og-image.png" />
+    <meta name="twitter:card"       content="summary_large_image" />
+    <meta name="twitter:title"      content="Filipa Maia - UX/UI Designer" />
+    <meta name="twitter:description" content="Portfolio of Filipa Maia, UX/UI Designer. Explore my projects, my background and get in touch." />
+    <meta name="twitter:image"      content="images/og-image.png" />
+    <link rel="icon" href="images/SVG/logotipo.svg" type="image/svg+xml" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- OpenDyslexic loaded on demand via JS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+    <script src="https://assets.calendly.com/assets/external/widget.js" defer></script>
+    <script src="app/resizer.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="app/script.js" defer></script>
+  </head>
+  <body>
+    <!-- Skip navigation — visible on focus for keyboard/screen reader users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <main id="main-content">
+
+      <!-- Preloader -->
+      <div id="preloader" role="status" aria-label="Loading Filipa Maia's portfolio">
+        <img
+          src="images/loading-web.gif"
+          alt=""
+          id="preloader-gif"
+        />
+      </div>
+
+      <!-- Navbar -->
+      <nav class="site-nav" aria-label="Site navigation">
+        <a href="/" aria-label="Filipa Maia — back to homepage">
+          <img
+            id="logo"
+            src="images/SVG/logotipo.svg"
+            alt="Filipa Maia logo — illustration of a girl with blue hair"
+          />
+        </a>
+        <div class="nav-social" aria-label="Filipa Maia's social media">
+          <a
+            href="https://www.linkedin.com/in/anafamaia"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-icons"
+            aria-label="Filipa Maia's LinkedIn profile (opens in a new tab)"
+          >
+            <img src="images/SVG/linkedin.svg" alt="" class="social-icon linkedin" />
+          </a>
+          <a
+            href="https://github.com/anafamaia"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-icons"
+            aria-label="Filipa Maia's GitHub profile (opens in a new tab)"
+          >
+            <img src="images/SVG/github.svg" alt="" class="social-icon github" />
+          </a>
+          <a
+            href="https://www.behance.net/anafamaia"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-icons"
+            aria-label="Filipa Maia's Behance profile (opens in a new tab)"
+          >
+            <img src="images/SVG/behance.svg" alt="" class="social-icon behance" />
+          </a>
+        </div>
+      </nav>
+
+      <!-- Background illustrations com image maps -->
+      <img
+        src="images/bg-dt.webp"
+        usemap="#imagemap-desktop"
+        alt="Illustration of a town with three clickable houses: About Me, Projects and Curious"
+        id="background-desktop"
+      />
+      <img
+        src="images/bg-mb.webp"
+        usemap="#imagemap-mobile"
+        alt="Illustration of a town with three clickable houses: About Me, Projects and Curious"
+        id="background-mobile"
+      />
+
+      <map name="imagemap-desktop" id="imagemap-desktop">
+        <area
+          shape="poly"
+          coords="285,561,287,303,293,293,514,292,548,375,550,561"
+          href="javascript:void(0);"
+          onclick="openModal('modal-about')"
+          alt="Open About Me section"
+          id="aboutMeDesktop"
+        />
+        <area
+          shape="poly"
+          coords="807,946,807,799,896,676,1063,678,1062,738,1119,790,1121,946"
+          href="javascript:void(0);"
+          onclick="openModal('modal-projects')"
+          alt="Open Projects section"
+          id="projectsDesktop"
+        />
+        <area
+          shape="poly"
+          coords="1318,592,1316,471,1360,341,1484,339,1543,471,1543,588"
+          href="javascript:void(0);"
+          onclick="openModal('modal-curious')"
+          alt="Open Curious section"
+          id="curiousDesktop"
+        />
+      </map>
+
+      <!-- Navigation for screen readers and keyboard users -->
+      <nav class="sr-nav visually-hidden" aria-label="Main sections">
+        <ul>
+          <li><button onclick="openModal('modal-about')">About Me</button></li>
+          <li><button onclick="openModal('modal-projects')">Projects</button></li>
+          <li><button onclick="openModal('modal-curious')">Curious</button></li>
+        </ul>
+      </nav>
+
+      <!-- Pop-ups de hover (desktop) -->
+      <div class="about-pop" aria-hidden="true">
+        <img src="images/SVG/about.svg" alt="" />
+      </div>
+      <div class="projects-pop" aria-hidden="true">
+        <img src="images/SVG/projects.svg" alt="" />
+      </div>
+      <div class="curious-pop" aria-hidden="true">
+        <img src="images/SVG/curious.svg" alt="" />
+      </div>
+
+      <!-- ===================== -->
+      <!-- Modal: About Me       -->
+      <!-- ===================== -->
+      <div
+        id="modal-about"
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-about-title"
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header justify-content-end">
+              <button
+                type="button"
+                class="btn-close"
+                aria-label="Close About Me"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p id="modal-about-title" class="visually-hidden">About Me</p>
+
+              <!-- Logotipo -->
+              <div class="about-photo-wrap">
+                <img src="images/logo.svg" alt="Filipa Maia logo" class="logo-about" />
+              </div>
+
+              <!-- Hi -->
+              <div class="about-intro">
+                <img src="images/SVG/hi.svg" alt="Hi, I'm Filipa!" class="img-title" />
+              </div>
+
+              <!-- Narrative -->
+              <div class="about-narrative">
+
+                <div class="about-chapter">
+
+                  <p>I got here the long way round. High school me was already obsessed with architectural blueprints and floor plans, so design was always in the cards. I just took a very scenic route to figure out exactly what kind.</p>
+                </div>
+
+                <div class="about-separator">
+                  <img src="images/divider1.png" alt="" aria-hidden="true" class="separator-img" />
+                </div>
+
+                <div class="about-chapter">
+
+                  <p>There was a translation degree that felt like wearing someone else's shoes. A stint at a telecom company that taught me more about human frustration than any textbook ever could. And then three years at a metal working company modelling metal structures in 2D and 3D, where I quietly discovered I had a thing for <em class="highlight">making complicated things feel simple and logical.</em> Turns out that skill never really left me.</p>
+                </div>
+
+                <div class="about-separator">
+                  <img src="images/divider2.png" alt="" aria-hidden="true" class="separator-img" />
+                </div>
+
+                <div class="about-chapter">
+
+                  <p>After that, things got interesting. Construction sites, high-pressure clients, real conversations with real stakes. I was an account manager and the thing I did the most was actually listening. And that's where I had the thought that changed everything: I love figuring out what people need. I just didn't love the selling part.</p>
+                </div>
+
+                <div class="about-separator">
+                  <img src="images/divider3.png" alt="" aria-hidden="true" class="separator-img" />
+                </div>
+
+                <div class="about-chapter">
+
+                  <p>So I made the call. Walked away from sales and went all in on the thing that had been pulling at me for years. <em class="highlight">UX/UI Design.</em> It felt like finally speaking my first language. Everything clicked. A year between two specialisations later, I had the vocabulary, the tools, and the obsession to match.</p>
+                </div>
+
+                <div class="about-separator">
+                  <img src="images/divider4.png" alt="" aria-hidden="true" class="separator-img" />
+                </div>
+
+                <div class="about-chapter">
+
+                  <p>Since then I've been doing the real thing. At a startup incubator I dug into usability problems in their website, messy, ambiguous, exactly the kind of work I thrive in. Then I became the sole designer at a B2B SaaS platform, owning the entire design process from the very first research question to the final shipped product. No safety net. No hand-holding. Just me, the problem, and the work.</p>
+                </div>
+
+                <div class="about-separator">
+                  <img src="images/divider1.png" alt="" aria-hidden="true" class="separator-img" />
+                </div>
+
+                <div class="about-chapter">
+
+                  <p>My background is all over the place, and I wouldn't change a thing. Every detour gave me something. <em class="highlight">I know how to listen deeply, ask the questions others skip, and translate messy human needs into design that actually solves something.</em> If you're looking for someone who gets both the people side and the craft side, let's talk.</p>
+                </div>
+
+              </div><!-- /narrative -->
+
+              <div class="about-cta">
+                <button
+                  class="link-curious btn-chat"
+                  onclick="Calendly.initPopupWidget({url: 'https://calendly.com/anafamaia'}); return false;"
+                  aria-label="Book a meeting with Filipa via Calendly"
+                >
+                  <img src="images/chat.svg" alt="Let's Chat!" class="img-chat" />
+                </button>
+              </div>
+
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== -->
+      <!-- Modal: Projects       -->
+      <!-- ===================== -->
+      <div
+        id="modal-projects"
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-projects-title"
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 id="modal-projects-title" class="modal-title text-center w-100 mx-auto">PROJECTS</h1>
+              <button
+                type="button"
+                class="btn-close"
+                aria-label="Close Projects"
+              ></button>
+            </div>
+            <div class="modal-body text-center d-flex align-items-center">
+              <div class="container">
+                <div class="row align-items-center justify-content-center">
+                  <div class="col-12 col-lg-6 mb-4">
+                    <button
+                      class="btn-project"
+                      onclick="openModal('modal-filipas-town')"
+                      aria-label="View Filipa's Town case study — portfolio website"
+                    >
+                      <img
+                        src="images/SVG/filipastown.svg"
+                        alt="Filipa's Town"
+                        class="project-logo filipasTown"
+                      />
+                    </button>
+                  </div>
+                  <div class="col-12 col-lg-6 mb-4">
+                    <button
+                      class="btn-project"
+                      onclick="openModal('modal-vodafone')"
+                      aria-label="View My Vodafone App case study — mobile app redesign"
+                    >
+                      <img
+                        src="images/SVG/vodafone.svg"
+                        alt="My Vodafone App"
+                        class="project-logo vodafone"
+                      />
+                    </button>
+                  </div>
+                  <div class="col-12 col-lg-6 mb-4">
+                    <button
+                      class="btn-project"
+                      onclick="openModal('modal-founders')"
+                      aria-label="View Founders Founders case study — website redesign"
+                    >
+                      <img
+                        src="images/SVG/f2.svg"
+                        alt="Founders Founders (F2)"
+                        class="project-logo founders"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================== -->
+      <!-- Modal: Filipa's Town       -->
+      <!-- ========================== -->
+      <div
+        id="modal-filipas-town"
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-ft-title"
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header project-modal-header">
+              <button
+                type="button"
+                class="btn-back"
+                onclick="closeModal('modal-filipas-town', 'modal-projects')"
+                aria-label="Back to Projects"
+              ></button>
+              <img
+                src="images/SVG/filipastown-ver.svg"
+                alt=""
+                aria-hidden="true"
+                class="project-header filipasTown-header mx-auto d-block"
+              />
+              <button
+                type="button"
+                class="btn-close"
+                aria-label="Close Filipa's Town case study and return to Projects"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+
+                <div class="row mb-3">
+                  <div class="col">
+                    <h1 id="modal-ft-title">Filipa's Town</h1>
+                    <p class="project-type">Website</p>
+                  </div>
+                </div>
+
+                <div class="row mb-4">
+                  <div class="col-lg-6 mb-3 mb-lg-0">
+                    <h2 class="project-section-label">Work Type</h2>
+                    <div class="work-type-pills">
+                      <span class="pill">Website Design</span>
+                      <span class="pill">UX/UI Design</span>
+                      <span class="pill">Web Development</span>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <h2 class="project-section-label">Stack</h2>
+                    <div class="stack-icons" role="list" aria-label="Technologies used: Figma, HTML, CSS, Bootstrap and JavaScript">
+                      <img src="./images/SVG/figma.svg" alt="Figma" role="listitem" class="stack stack-figma" />
+                      <img src="./images/SVG/html.svg" alt="HTML" role="listitem" class="stack" />
+                      <img src="./images/SVG/css.svg" alt="CSS" role="listitem" class="stack" />
+                      <img src="./images/SVG/bootstrap.svg" alt="Bootstrap" role="listitem" class="stack stack-boot" />
+                      <img src="./images/SVG/js.svg" alt="JavaScript" role="listitem" class="stack" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <img
+                      src="./images/intro-filipastown.png"
+                      alt="Introductory image of the Filipa's Town project, showing the town illustration on desktop and mobile"
+                      class="mw-100"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <h2 class="project-heading mb-3">Where it all began</h2>
+                    <p>Portfolios are boring. Most of them look the same, feel the same, and are forgotten the moment you close the tab.</p>
+                    <p>I didn't want that. I wanted mine to feel like <em class="highlight">me</em>, someone who takes design seriously but doesn't take herself too seriously.</p>
+                    <p>So instead of a grid of projects and a contact form, I built a town.</p>
+                    <img
+                      src="./images/moodboard-filipastown.png"
+                      alt="Filipa's Town moodboard with visual references for colours, typography and illustration style"
+                      class="mw-100 mt-3"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <h2 class="project-heading mb-3">The mission</h2>
+                    <p>Three things I needed to nail:</p>
+                    <p>Show that I can design <em class="highlight">and</em> develop. Stand out without being confusing. And make sure a recruiter with 30 seconds to spare could still find what they needed.</p>
+                    <p>That last one was the real challenge, because a creative concept that sacrifices usability isn't clever, it's just annoying.</p>
+                    <img
+                      src="./images/mission-filipastown.png"
+                      alt="Diagram showing the three main portfolio goals: showcasing skills, standing out through interactive experience, and balancing creativity with usability"
+                      class="mw-100"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <h2 class="project-heading mb-3">From chaos to clarity</h2>
+                    <p>I looked at a lot of portfolios. Minimal ones, wild ones, everything in between. Most of the impressive ones had a problem: they were impressive for about ten seconds, then impossible to use.</p>
+                    <p>That was my north star. <strong>The town metaphor only works if it feels obvious the moment you land on it.</strong> No tutorial needed, no figuring it out, just explore.</p>
+                    <p>Early sketches were messy (as they should be), but they helped me lock in the core idea: houses as entry points for each section, About Me, Works, Curious, and interaction that follows spatial logic people already understand.</p>
+                    <img
+                      src="./images/sketches-filipastown.png"
+                      alt="Initial hand-drawn sketches of the portfolio navigation structure, with rough drawings of the town houses and interaction flows"
+                      class="mw-100"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <h2 class="project-heading mb-3">Mapping the journey</h2>
+                    <p>The navigation runs on a <strong>custom illustrated background used as an image map</strong>. Houses with blue rooftops are clickable hotspots. Each one opens a modal with the right content for that "place."</p>
+                    <p>Simple in concept. Less simple to execute well.</p>
+                    <p>I tested the flows with people who had never seen an image map before, refined until nothing needed explaining, and added two small details that make a big difference: <strong>buttons written in my own handwriting</strong> (yes, really) and a <strong>loading animation</strong> I made in Illustrator and After Effects, a nod to my background in swimming that sets the tone before the town even appears.</p>
+                    <img
+                      src="./images/abrirmodal.gif"
+                      alt="Animation demonstrating how clicking a house in the illustration opens a modal with content — in this case, the About Me section"
+                      class="mw-100"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <h2 class="project-heading mb-3">Giving shape to the vision</h2>
+                    <p>Everything here is custom. The illustration, the UI, the code.</p>
+                    <p>I drew the background in <strong>Adobe Illustrator</strong>, two versions, one horizontal for desktop, one vertical for mobile, so the spatial logic stayed intact across screen sizes. Then I built the site in <strong>HTML, CSS, Bootstrap and JavaScript</strong>, with a UI Kit to keep things consistent as the project grew.</p>
+                    <p>The tone of voice got the same treatment. Playful where it could be, clear where it needed to be. The contact section has personality, but it still tells you exactly what to do next.</p>
+                    <img
+                      src="./images/uikit-filipastown.png"
+                      alt="Filipa's Town UI Kit showing the colour palette, typography and reusable components such as buttons and modals"
+                      class="mw-100"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <h2 class="project-heading mb-3">Where design meets development</h2>
+                    <p>Being the designer <em class="highlight">and</em> the developer on something like this is both a superpower and a trap.</p>
+                    <p>Every design choice is also a technical decision. The modal system, for example, keeping each one anchored to the right hotspot as the window resizes took more passes than I'd like to admit. Accessibility was built in from the start, not added at the end: a widget that lets users enable and exit accessibility mode whenever they want.</p>
+                    <p>The iteration loop was fast and a little chaotic. Exactly how it should be.</p>
+                    <img
+                      src="./images/designtodev-filipastown.png"
+                      alt="Side-by-side comparison between the Figma prototype and the final coded result, showing the fidelity between design and development"
+                      class="mw-100"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <h2 class="project-heading mb-3">From vision to reality</h2>
+                    <p>The result is a portfolio that does what most portfolios don't: it shows personality before you've read a single word.</p>
+                    <p>Navigation is spatial but intuitive. Calls to action are where they should be. It works on your phone. And somewhere in there, there's a swimming pool.</p>
+                    <img
+                      src="./images/mockupfinal-filipastown.png"
+                      alt="Final mockups of the Filipa's Town portfolio on desktop, tablet and mobile devices, showing the responsiveness and finished look of the project"
+                      class="mw-100 mt-3"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <h2 class="project-heading mb-3">The impact</h2>
+                    <p>It worked.</p>
+                    <p>More interviews. Better conversations. Recruiters and hiring managers who reached out specifically because the portfolio stuck with them, and that almost never happens.</p>
+                    <p>What I'm most proud of isn't the concept though. It's that the feedback was always about two things together: <em class="highlight">how original it is</em> and <em class="highlight">how easy it is to use.</em> That balance was the whole point.</p>
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <h2 class="project-heading mb-3">Music to my ears</h2>
+                    <figure>
+                      <blockquote class="blockquote">
+                        <p>"Phenomenal portfolio, clear, concise and most of all, creative!"</p>
+                      </blockquote>
+                      <figcaption class="blockquote-footer">
+                        <cite>Daniel Mota, Senior Software Engineer &amp; Tech Lead</cite>
+                      </figcaption>
+                    </figure>
+                    <figure>
+                      <blockquote class="blockquote">
+                        <p>"Parabéns pelo teu site, muito interessante :)"</p>
+                      </blockquote>
+                      <figcaption class="blockquote-footer">
+                        <cite>João Lima, UX &amp; Usability Specialist</cite>
+                      </figcaption>
+                    </figure>
+                    <figure>
+                      <blockquote class="blockquote">
+                        <p>"Parabéns, Filipa! Adorei o teu site :)"</p>
+                      </blockquote>
+                      <figcaption class="blockquote-footer">
+                        <cite>Jéssica Quirino, CRO &amp; UX Specialist</cite>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================== -->
+      <!-- Modal: Vodafone            -->
+      <!-- ========================== -->
+      <div
+        id="modal-vodafone"
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-vdf-title"
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header project-modal-header">
+              <button
+                type="button"
+                class="btn-back"
+                onclick="closeModal('modal-vodafone', 'modal-projects')"
+                aria-label="Back to Projects"
+              ></button>
+              <img
+                src="images/SVG/vodafone-ver.svg"
+                alt=""
+                aria-hidden="true"
+                class="project-header vodafone-header mx-auto d-block"
+              />
+              <button
+                type="button"
+                class="btn-close"
+                aria-label="Close My Vodafone App case study and return to Projects"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+
+                <div class="row mb-3">
+                  <div class="col">
+                    <h1 id="modal-vdf-title">My Vodafone App</h1>
+                    <p class="project-type">Mobile App</p>
+                  </div>
+                </div>
+
+                <div class="row mb-4">
+                  <div class="col-lg-6 mb-3 mb-lg-0">
+                    <h2 class="project-section-label">Work Type</h2>
+                    <div class="work-type-pills">
+                      <span class="pill">UX/UI Design</span>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <h2 class="project-section-label">Stack</h2>
+                    <div class="stack-icons" role="list" aria-label="Technologies used: Figma">
+                      <img src="./images/SVG/figma.svg" alt="Figma" role="listitem" class="stack stack-figma" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <img
+                      src="./images/intro-vdf.png"
+                      alt="Introductory image of the My Vodafone App project showing redesigned screens on mobile devices"
+                      class="mw-100"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <h2 class="project-heading mb-3">Where it all began</h2>
+                    <p>We were already My Vodafone app users before this project started. We knew the app, we used it regularly, and honestly, we found it frustrating on a regular basis too.</p>
+                    <p>Too much information on screen at once. Simple tasks hidden behind too many taps. A dashboard that showed everything except what you actually needed right now.</p>
+                    <p>So when the opportunity came to redesign it, it felt personal. Because it was.</p>
+                    <img
+                      src="./images/forum-vdf.png"
+                      alt="Screenshot of user comments on the Vodafone forum reporting usability issues in the app"
+                      class="mw-100 mt-3"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <h2 class="project-heading mb-3">The mission</h2>
+                    <p>Not a full reinvention, just making the app work the way it should have from the start.</p>
+                    <p>The focus was on three things: surface what users actually care about (data, balance, bills), make the most common tasks faster and less confusing, and modernise the look without losing what makes Vodafone recognisable.</p>
+                    <p>Simpler. Cleaner. Less "where is that again?"</p>
+                    <img
+                      src="./images/mission-vdf.png"
+                      alt="Diagram showing the three redesign goals: ease of use, simplified navigation and visual modernisation"
+                      class="mw-100"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <h2 class="project-heading mb-3">From chaos to clarity</h2>
+                    <p>We already had opinions going in, but opinions aren't research, so we did the work.</p>
+                    <p>Talking to other users confirmed we weren't special cases. <em class="highlight">"I just want to quickly see my data left, but I always get lost"</em> came up more than once, in different words. A heuristic evaluation using Nielsen's principles put numbers to what people were feeling: poor visibility of system status, inconsistency across screens, not enough error prevention.</p>
+                    <p>Competitor analysis filled in the rest. Other telecom apps were doing some things noticeably better: clearer usage graphs, smarter information hierarchy, add-on flows that didn't require a tutorial.</p>
+                    <p>The conclusion was the same everywhere we looked: simpler, clearer, more consistent.</p>
+                    <img
+                      src="./images/research-vdf.svg"
+                      alt="Research phase summary: user interviews, heuristic evaluation and competitor analysis"
+                      class="mw-100"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <h2 class="project-heading mb-3">Mapping the journey</h2>
+                    <p>We mapped the flows we knew were broken, paying a bill, checking a plan, finding usage details, and redesigned them from the user's perspective, which was easy, because we <em class="highlight">were</em> the users.</p>
+                    <p>Paying a bill went from a confusing multi-step process to a clear 3-step flow. The dashboard became a hub: data usage, balance, billing alerts, all visible immediately, with the option to personalise it based on what you use most.</p>
+                    <p>Every wireframe came with the same question: <em class="highlight">if I landed here right now, could I find what I need without thinking about it?</em></p>
+                    <img
+                      src="./images/journey-vdf.png"
+                      alt="User flow of the redesigned bill payment process in 3 steps, compared to the longer and more confusing original flow"
+                      class="mw-100"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <h2 class="project-heading mb-3">Giving shape to the vision</h2>
+                    <p>A UI Kit brought everything together: Vodafone red as the anchor, balanced with neutral tones so the screen didn't feel like an emergency, reusable components to keep things consistent across every flow.</p>
+                    <p>High-fidelity mockups showed what the app could feel like when hierarchy is respected and clutter is gone. Lighter. More confident. Something you'd actually open without sighing first.</p>
+                    <img
+                      src="./images/prototype-vdf.png"
+                      alt="Wireframes and high-fidelity mockups of the main redesigned screens: dashboard, bills and active services"
+                      class="mw-100"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <h2 class="project-heading mb-3">Testing the design</h2>
+                    <p>Once the prototype was ready, we ran usability tests with three core tasks: viewing and paying the December invoice, checking active services, and adding a new mobile service.</p>
+                    <p>The results were useful in the best way: specific, actionable, a little humbling.</p>
+                    <p>The Services screen had two clear problems: icons without labels left users guessing, and secondary options placed below the active services section were pulling attention away from content that mattered more. Small things, but the kind of small things that add up to "this app is confusing."</p>
+                    <p>We fixed both. Better labels, stronger hierarchy, clearer visual flow. The kind of iteration that only happens when you actually watch people use what you built.</p>
+                    <img
+                      src="./images/testing-vdf.png"
+                      alt="Usability test results: task success rate chart and annotated screenshots highlighting issues found on the services screen"
+                      class="mw-100"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <h2 class="project-heading mb-3">From vision to reality</h2>
+                    <p>The redesigned app surfaces what matters instantly. Core tasks are faster. The UI is consistent without being rigid. And the dashboard finally feels like a dashboard, not a checklist of everything the app can do.</p>
+                    <img
+                      src="./images/final-vdf.png"
+                      alt="Final mockups of the My Vodafone app redesign on iPhone devices, showing the dashboard, bills and services screens"
+                      class="mw-100 mt-3"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <h2 class="project-heading mb-3">The impact</h2>
+                    <p>This one meant more than most projects because the starting point was real frustration, not a brief.</p>
+                    <p>Solving something you've personally struggled with, then validating that solution with research and testing, is a different kind of satisfaction. It also builds a different kind of confidence: in your instincts as a user, and in your ability to turn those instincts into something that works for a lot of other people too.</p>
+                    <p>It's one of the projects I'm most proud to show, not because of how it looks, but because of everything that went into getting there.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================== -->
+      <!-- Modal: Founders Founders   -->
+      <!-- ========================== -->
+      <div
+        id="modal-founders"
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-f2-title"
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header project-modal-header">
+              <button
+                type="button"
+                class="btn-back"
+                onclick="closeModal('modal-founders', 'modal-projects')"
+                aria-label="Back to Projects"
+              ></button>
+              <img
+                src="images/SVG/f2-ver.svg"
+                alt=""
+                aria-hidden="true"
+                class="project-header founders-header mx-auto d-block"
+              />
+              <button
+                type="button"
+                class="btn-close"
+                aria-label="Close Founders Founders case study and return to Projects"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+
+                <div class="row mb-3">
+                  <div class="col">
+                    <h1 id="modal-f2-title">Founders Founders (F2)</h1>
+                    <p class="project-type">Website Redesign</p>
+                  </div>
+                </div>
+
+                <div class="row mb-4">
+                  <div class="col-lg-6 mb-3 mb-lg-0">
+                    <h2 class="project-section-label">Work Type</h2>
+                    <div class="work-type-pills">
+                      <span class="pill">UX Research</span>
+                      <span class="pill">UX Design</span>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <h2 class="project-section-label">Stack</h2>
+                    <div class="stack-icons" role="list" aria-label="Technologies used: Figma">
+                      <img src="./images/SVG/figma.svg" alt="Figma" role="listitem" class="stack stack-figma" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <img
+                      src="./images/hero-f2.png"
+                      alt="Introductory image of the Founders Founders website redesign project"
+                      class="mw-100 hero-img"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <h2 class="project-heading mb-3">Where it all began</h2>
+                    <p>Founders Founders supports entrepreneurs and startups through incubation programs, community initiatives and workspace services.</p>
+                    <p>When I joined during my internship, the website didn't reflect any of that. Broken buttons, navigation that went nowhere, key services buried where no one would look. The company had something genuinely valuable to offer and the website was the last place you'd figure that out.</p>
+                    <p>It wasn't a visual problem. It was a structural one.</p>
+                    <img
+                      src="./images/whereitallbegan-f2.png"
+                      alt="Placeholder — Where it all began image"
+                      class="mw-100 mt-3"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <h2 class="project-heading mb-3">The mission</h2>
+                    <p>Turn the website from a digital placeholder into something that actually worked: bringing in the right people, communicating the right things, and making it easy to take the next step.</p>
+                    <p>Not just a prettier website. A more useful one.</p>
+                    <img
+                      src="./images/mission-f2.png"
+                      alt="Placeholder — The mission image"
+                      class="mw-100"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <h2 class="project-heading mb-3">From chaos to clarity</h2>
+                    <p>Before touching anything, I needed to understand what was broken and why.</p>
+                    <p>I audited the existing site, mapped where things fell apart, and looked at what competitors were doing. Most had decent navigation but none of them made their unique programs feel like the main event. That gap was the opportunity.</p>
+                    <p>User personas kept decisions grounded in real motivations, mostly founders and startup teams actively looking for incubation support, so nothing was designed in the abstract.</p>
+                    <img
+                      src="./images/research-f2.png"
+                      alt="Placeholder — From chaos to clarity image"
+                      class="mw-100"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <h2 class="project-heading mb-3">Designing the user's path</h2>
+                    <p>I ran a card sorting activity with stakeholders and potential users to figure out how the content should actually be organised.</p>
+                    <p>It's one of those exercises that always surfaces something unexpected. What the business thinks is important and what users go looking for first aren't always the same thing. The goal was to find the structure that worked for both.</p>
+                    <p>The result was a cleaner sitemap where the incubation program, services and community had the prominence they deserved. Wireframes followed: consistent layouts, clear hierarchy, calls-to-action placed where people would actually see them.</p>
+                    <img
+                      src="./images/userpath-f2.png"
+                      alt="Placeholder — Designing the user's path image"
+                      class="mw-100"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <h2 class="project-heading mb-3">Giving shape to the vision</h2>
+                    <p>The visual layer was being handled by the graphic design team, so my scope was the structure underneath it.</p>
+                    <p>What I delivered were implementation-ready wireframes: detailed enough to communicate layout logic and conversion intent, flexible enough to receive the visual identity on top without losing the structure underneath.</p>
+                    <p>The foundation was the deliverable. And foundations only matter if what gets built on them holds up.</p>
+                    <img
+                      src="./images/wireframes-f2.png"
+                      alt="Placeholder — Giving shape to the vision image"
+                      class="mw-100"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <h2 class="project-heading mb-3">From vision to implementation</h2>
+                    <p>A few months after my internship ended, the website went live based on the wireframes and architecture I had delivered.</p>
+                    <p>I wasn't there for the final visual execution, but the implemented site followed the structural decisions from the UX phase. Which was the whole point.</p>
+                    <img
+                      src="./images/beforeafter-f2.png"
+                      alt="Placeholder — From vision to implementation image"
+                      class="mw-100 mt-3"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mb-5">
+                  <div class="col">
+                    <h2 class="project-heading mb-3">The impact</h2>
+                    <p>After the update, the incubation program reached full capacity, new scaleups joined the community, and a second edition is already being launched.</p>
+                    <p>Better structure and visibility for the right services turned a static website into something that actually drove growth.</p>
+                    <p>This project taught me something I haven't forgotten: you don't need to own the final product to have a real impact on the outcome. Strong UX foundations show up in the results whether or not your name is on the last file.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================== -->
+      <!-- Modal: Curious             -->
+      <!-- ========================== -->
+      <div
+        id="modal-curious"
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-curious-title"
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 id="modal-curious-title" class="modal-title text-center w-100">CURIOUS?</h1>
+              <button
+                type="button"
+                class="btn-close"
+                aria-label="Close Curious"
+              ></button>
+            </div>
+            <div class="modal-body align-items-center">
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-lg-12">
+
+                    <div class="div-curious">
+                      <p class="curious-title">So you made it to the end of town.</p>
+                      <div class="curious-separator">
+                        <img src="images/divider1.png" alt="" aria-hidden="true" class="separator-img" />
+                      </div>
+                      <p class="curious-questions">Got a role that needs someone who thinks in systems and builds in pixels? A project that's been stuck on "almost there" for too long? Or just want to talk design with someone who actually gets it?</p>
+                      <p class="curious-fact">Fair warning: I notice bad UX everywhere, door handles, elevator buttons, supermarket self-checkouts. It's not a hobby, it's a condition.</p>
+                      <p class="curious-cta">Either way, let's make something happen.</p>
+                      <div class="curious-actions">
+                        <button
+                          class="link-curious btn-chat"
+                          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/anafamaia'}); return false;"
+                          aria-label="Book a meeting with Filipa via Calendly"
+                        >
+                          <img src="images/chat.svg" alt="Let's Chat!" class="img-chat" />
+                        </button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer>
+      <div class="d-flex justify-content-center align-items-center">
+        <p id="footer" class="text-center">
+          © 2024 – <span id="year"></span> Filipa Maia | Crafted with creativity and code
+        </p>
+      </div>
+    </footer>
+
+    <!-- Hint bar — desktop only -->
+    <div id="explore-hint" aria-hidden="true">
+      <span class="hint-text">Explore the village by clicking on the houses with blue rooftops</span>
+    </div>
+
+    <!-- Accessibility Widget -->
+    <div id="accessibility-widget">
+      <button
+        id="accessibility-button"
+        onclick="toggleAccessibilityMenu()"
+        aria-label="Open accessibility options"
+        aria-expanded="false"
+        aria-controls="accessibility-menu"
+      >
+        <img
+          src="images/accessibility.png"
+          alt=""
+          aria-hidden="true"
+          class="widget"
+        />
+      </button>
+      <div
+        id="accessibility-menu"
+        role="dialog"
+        aria-labelledby="accessibility-menu-title"
+        aria-modal="false"
+      >
+        <div class="menu-header">
+          <h2 id="accessibility-menu-title">Accessibility</h2>
+          <button
+            id="close-accessibility"
+            class="btn-close"
+            onclick="resetAccessibility()"
+            aria-label="Close accessibility menu"
+          ></button>
+        </div>
+
+        <div class="a11y-body">
+          <div class="a11y-group">
+            <p class="a11y-group-label">Vision</p>
+            <button class="a11y-btn" data-mode="high-contrast" onclick="toggleA11y('high-contrast')">High Contrast</button>
+            <button class="a11y-btn" data-mode="deuteranopia" onclick="toggleA11y('deuteranopia')">Deuteranopia</button>
+            <button class="a11y-btn" data-mode="protanopia"   onclick="toggleA11y('protanopia')">Protanopia</button>
+            <button class="a11y-btn" data-mode="tritanopia"   onclick="toggleA11y('tritanopia')">Tritanopia</button>
+            <button class="a11y-btn" data-mode="monochrome"   onclick="toggleA11y('monochrome')">Monochrome</button>
+          </div>
+
+          <div class="a11y-group">
+            <p class="a11y-group-label">Reading</p>
+            <button class="a11y-btn" data-mode="dyslexia"    onclick="toggleA11y('dyslexia')">Dyslexia-friendly font</button>
+            <button class="a11y-btn" data-mode="large-text"  onclick="toggleA11y('large-text')">Larger text</button>
+            <button class="a11y-btn" data-mode="line-height" onclick="toggleA11y('line-height')">Increased line spacing</button>
+          </div>
+
+          <div class="a11y-group">
+            <p class="a11y-group-label">Motion &amp; Focus</p>
+            <button class="a11y-btn" data-mode="reduce-motion"  onclick="toggleA11y('reduce-motion')">Reduce motion</button>
+            <button class="a11y-btn" data-mode="focus-mode"     onclick="toggleA11y('focus-mode')">Highlight focus</button>
+          </div>
+        </div>
+
+        <div class="a11y-footer">
+          <button class="a11y-reset-btn" onclick="resetAccessibility()">Reset all</button>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
